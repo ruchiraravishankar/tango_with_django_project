@@ -4,6 +4,7 @@
 {% endblock %}
 
 {% block body_block %}
+    {% if user.is_authenticated %}
         {%  if category %}
 
         <h1> Add a Page to {{category.name}}</h1>
@@ -24,5 +25,6 @@
         {% else %}
             A category by this name does not exist!
         {% endif %}
+    {% endif %}
 
 {% endblock %}
